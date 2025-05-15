@@ -2,6 +2,7 @@ import pygame
 from pygame.locals import *
 
 from game_world import World
+from player import Player
 
 pygame.init()
 
@@ -11,7 +12,7 @@ screen_height = 1000
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("Hardest Game")
 
-tile_size = 200
+tile_size = 50
 clock = pygame.time.Clock()
 fps = 60
 
@@ -26,12 +27,15 @@ level1_data = [
 level1 = World(level1_data, tile_size)
 
 deaths = 0
+player = Player(0, 0, tile_size)
 
 run = True
 while run:
     clock.tick(fps)
     screen.fill((255, 255, 255))
     level1.draw()
+
+    player.update()
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:

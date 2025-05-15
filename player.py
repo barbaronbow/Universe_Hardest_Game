@@ -9,17 +9,31 @@ screen = pygame.display.set_mode((screen_width, screen_height))
 
 
 class Player:
-    def __init__(self, x, y, tile_size):
-        img = pygame.image.load("img/player.jpg")
-        self.image = pygame.transform.scale(img, (40, 80))
+    def __init__(self, x, y, size):
+        img = pygame.image.load("img/player.png")
+        self.image = pygame.transform.scale(img, (size * 5 / 8, size * 5 / 8))
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
-        self.player_size = tile_size * 5 / 8
 
     def update(self):
         key = pygame.key.get_pressed()
         if key[pygame.K_a]:
             self.rect.x -= 1
 
+        if key[pygame.K_d]:
+            self.rect.x += 1
+
+        if key[pygame.K_w]:
+            self.rect.y -= 1
+
+        if key[pygame.K_s]:
+            self.rect.y += 1
+
         screen.blit(self.image, self.rect)
+
+
+class Obstacle(Player):
+    def __init__(self, x, y, size):
+        super().__init__(x, y, size)
+        img = pygame.image.load("img/obstacle.png")
