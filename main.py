@@ -3,6 +3,7 @@ from pygame.locals import *
 
 from game_world import World
 from player import Player
+from player import Obstacle
 
 pygame.init()
 
@@ -28,7 +29,7 @@ level1 = World(level1_data, tile_size)
 
 deaths = 0
 player = Player(0, 0, tile_size)
-obstacle = Obstacle(0, 0, tile_size)
+obstacle = Obstacle(100, 50, tile_size)
 
 run = True
 while run:
@@ -37,10 +38,11 @@ while run:
     level1.draw()
 
     player.update()
-    if player.colliderect(obstacle):
+    obstacle.update()
+    if player.rect.colliderect(obstacle):
         deaths += 1
         print(f"Deaths: {deaths}")
-        continue
+        
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
