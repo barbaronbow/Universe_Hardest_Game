@@ -37,3 +37,4 @@ class Obstacle(Player):
     def __init__(self, x, y, size):
         super().__init__(x, y, size)
         img = pygame.image.load("img/obstacle.png")
+        self.image = pygame.transform.scale(img, (size * 5 / 8, size * 5 / 8))
