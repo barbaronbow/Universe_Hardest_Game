@@ -28,6 +28,7 @@ level1 = World(level1_data, tile_size)
 
 deaths = 0
 player = Player(0, 0, tile_size)
+obstacle = Obstacle(0, 0, tile_size)
 
 run = True
 while run:
@@ -36,6 +37,10 @@ while run:
     level1.draw()
 
     player.update()
+    if player.colliderect(obstacle):
+        deaths += 1
+        print(f"Deaths: {deaths}")
+        continue
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
