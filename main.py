@@ -38,6 +38,7 @@ while run:
 
     player.update()
     obstacle.update()
+    
     if player.rect.colliderect(obstacle):
         player = Player(0, 0, tile_size)
         deaths += 1
