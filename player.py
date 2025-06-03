@@ -2,6 +2,8 @@ import pygame
 
 from game_world import World
 
+white = (255, 255, 255)
+
 screen_width = 1000
 screen_height = 1000
 
@@ -69,14 +71,24 @@ class Player:
         self.rect.y = self.spawnpoint[1]
 
 
-class Obstacle(Player):
+class Obstacle:
     def __init__(self, x, y, size):
-        super().__init__(x, y, size)
+        # super().__init__(x, y, size)
         img = pygame.image.load("obstacle.png")
-        self.image = pygame.transform.scale(img, (size * 5 / 8, size * 5 / 8))
+        
+        self.image = img.convert()
+        self.image.set_colorkey(white)
+        self.image = pygame.transform.scale(self.image, (size * 5 / 8, size * 5 / 8))
+        
+        
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
 
     def update(self):
         screen.blit(self.image, self.rect)
+
+
+class Coin(Obstacle):
+    def __init__(self, x, y, size):
+        super().__init__(x, y, size)
