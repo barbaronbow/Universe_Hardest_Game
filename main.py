@@ -2,10 +2,11 @@ import pygame
 from pygame.locals import *
 
 from game_world import World
-from player import Player
-from player import Obstacle
+from player import Obstacle, Player
 
 pygame.init()
+
+black = (0, 0, 0)
 
 screen_width = 1800
 screen_height = 1000
@@ -31,6 +32,9 @@ deaths = 0
 player = Player(0, 0, tile_size)
 obstacle = Obstacle(100, 25, tile_size)
 
+font = pygame.font.Font("freesansbold.ttf", 32)
+
+
 run = True
 while run:
     clock.tick(fps)
@@ -39,14 +43,18 @@ while run:
 
     player.update(level1)
     obstacle.update()
-    
+
+    # Display and update death message
+    death_message = f"Deaths: {deaths}"
+    text = font.render(death_message, True, black)
+    textbox = text.get_rect()
+
     if player.rect.colliderect(obstacle):
         player.respawn()
         deaths += 1
-        print(f"Deaths: {deaths}")
-        
+        print(death_message)
 
-        
+    screen.blit(text, textbox)
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
