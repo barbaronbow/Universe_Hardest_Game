@@ -1,4 +1,5 @@
 
+
 # What is Universe's Hardest Game?
 The "Universe's Hardest Game" is inspired by another popular game following the same convention, ["World's Hardest Game"](https://www.coolmathgames.com/0-worlds-hardest-game) on [Cool Math Games](https://www.coolmathgames.com/). It follows the exact same play style and level design. You control a red square through either WASD or the arrow keys, where you are forced to navigate and beat levels. Each level requires you to collect every coin. There are green zones which represents checkpoints or a win condition to fulfill a level.
 
@@ -38,7 +39,7 @@ Selecting `2` will place down checkpoints, meaning if your player travels over i
 
 The other number squares can be set different functions if you are willing to spend extra time on it. To make sure the level will playable, you must add an extra index to both `levels_obstacles` list and `level_coins` list. The extra index does not need to contain anything.
 
-In `level_coins` you just need to store the coordinates of each coin (in pixels). In `level_obstacles`, it stores dictionaries. The dictionary follows the format `{"x": x-coordinate, "y": y-coordinate, pattern, "range": the range the pattern takes, "speed" the quickness of the obstacle}`. The possible options for pattern includes:
+In `level_coins` you just need to store the coordinates of each coin (in pixels). In `level_obstacles`, it stores dictionaries. The dictionary follows the format `{"x": x-coordinate, "y": y-coordinate, pattern, "range": the range the pattern takes, "speed" the quickness of the obstacle}`. **Note:** a negative speed will just reverse the direction. The possible options for pattern includes:
 * "circle" **Note:** the range is just the radius
 * "horizontal"
 * "vertical"
