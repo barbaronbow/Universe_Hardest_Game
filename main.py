@@ -64,13 +64,13 @@ level_coins = [
 level_obstacles = [
     # Level 1: 4 horizontal sweepers at different speeds and heights
     [
-        # {"x": 850, "y": 200, "pattern": "horizontal", "range": 1550, "speed": 0.2},
-        # {"x": 850, "y": 300, "pattern": "horizontal", "range": 1550, "speed": -0.2},
-        # {"x": 850, "y": 400, "pattern": "horizontal", "range": 1550, "speed": 0.4},
-        # {"x": 850, "y": 500, "pattern": "horizontal", "range": 1550, "speed": -0.2},
-        # {"x": 850, "y": 600, "pattern": "horizontal", "range": 1550, "speed": 0.2},
-        # {"x": 850, "y": 700, "pattern": "horizontal", "range": 1550, "speed": -0.2},
-        # {"x": 850, "y": 800, "pattern": "horizontal", "range": 1550, "speed": 0.2},
+        {"x": 850, "y": 200, "pattern": "horizontal", "range": 1550, "speed": 0.2},
+        {"x": 850, "y": 300, "pattern": "horizontal", "range": 1550, "speed": -0.2},
+        {"x": 850, "y": 400, "pattern": "horizontal", "range": 1550, "speed": 0.4},
+        {"x": 850, "y": 500, "pattern": "horizontal", "range": 1550, "speed": -0.2},
+        {"x": 850, "y": 600, "pattern": "horizontal", "range": 1550, "speed": 0.2},
+        {"x": 850, "y": 700, "pattern": "horizontal", "range": 1550, "speed": -0.2},
+        {"x": 850, "y": 800, "pattern": "horizontal", "range": 1550, "speed": 0.2},
     ],
     [
         {"x": 550, "y": 600, "pattern": "circle", "range": 250, "speed": 0.3},
