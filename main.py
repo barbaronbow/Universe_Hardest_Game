@@ -29,41 +29,63 @@ fps = 60
 level_data = [
     # Level 1 - "The Gauntlet" - Simple but deadly corridor
     [
-        [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-        [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
-        [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
-        [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
-        [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
-        [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
-        [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
-        [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,1],
-        [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,1],
-        [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 1],
+        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 1],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     ],
-    
+    [
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        [1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 1],
+        [1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 1],
+        [1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1],
+        [1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1],
+        [1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1],
+        [1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    ],
 ]
 
-# Coin positions for each level (x, y) - strategically placed in danger zones
 level_coins = [
     # Level 1: 3 coins in the path of moving obstacles
     [(300, 450), (800, 250), (1200, 650)],
-    
-    # Level 2: 4 coins in narrow passages
+    [(550, 600), (800, 250), (1150, 600)],
 ]
 
 # Moving obstacle patterns for each level - BRUTAL difficulty
 level_obstacles = [
     # Level 1: 4 horizontal sweepers at different speeds and heights
     [
-        {"x":900, "y": 200, "pattern": "horizontal", "range": 1600, "speed": 0.2},
-        {"x":900, "y": 300, "pattern": "horizontal", "range": 1600, "speed": -0.2},
-        {"x":900, "y": 400, "pattern": "horizontal", "range": 1600, "speed": 0.4},
-        {"x":900, "y": 500, "pattern": "horizontal", "range": 1600, "speed": -0.2},
-        {"x":900, "y": 600, "pattern": "horizontal", "range": 1600, "speed": 0.2},
-        {"x":900, "y": 700, "pattern": "horizontal", "range": 1600, "speed": -0.2},
-        {"x":900, "y": 800, "pattern": "horizontal", "range": 1600, "speed": 0.2},
+        # {"x": 850, "y": 200, "pattern": "horizontal", "range": 1550, "speed": 0.2},
+        # {"x": 850, "y": 300, "pattern": "horizontal", "range": 1550, "speed": -0.2},
+        # {"x": 850, "y": 400, "pattern": "horizontal", "range": 1550, "speed": 0.4},
+        # {"x": 850, "y": 500, "pattern": "horizontal", "range": 1550, "speed": -0.2},
+        # {"x": 850, "y": 600, "pattern": "horizontal", "range": 1550, "speed": 0.2},
+        # {"x": 850, "y": 700, "pattern": "horizontal", "range": 1550, "speed": -0.2},
+        # {"x": 850, "y": 800, "pattern": "horizontal", "range": 1550, "speed": 0.2},
     ],
-    
+    [
+        {"x": 550, "y": 600, "pattern": "circle", "range": 250, "speed": 0.3},
+        {"x": 550, "y": 600, "pattern": "circle", "range": 150, "speed": 0.3},
+        {"x": 550, "y": 600, "pattern": "circle", "range": 125, "speed": 0.3},
+        {"x": 550, "y": 600, "pattern": "circle", "range": 250, "speed": -0.3},
+        {"x": 550, "y": 600, "pattern": "circle", "range": 150, "speed": -0.3},
+        {"x": 550, "y": 600, "pattern": "circle", "range": 125, "speed": -0.3},
+        {"x": 1150, "y": 600, "pattern": "circle", "range": 250, "speed": 0.3},
+        {"x": 1150, "y": 600, "pattern": "circle", "range": 250, "speed": -0.3},
+        {"x": 1150, "y": 600, "pattern": "circle", "range": 150, "speed": -0.3},
+        {"x": 1150, "y": 600, "pattern": "circle", "range": 150, "speed": 0.3},
+        {"x": 1150, "y": 600, "pattern": "circle", "range": 125, "speed": 0.4},
+        {"x": 1150, "y": 600, "pattern": "circle", "range": 125, "speed": -0.3},
+    ],
 ]
 
 
@@ -203,7 +225,7 @@ class GameManager:
 
         # Check for level completion
         if self.check_goal():
-            if self.current_level < len(level_data) - 1:
+            if self.current_level <= len(level_data) - 1:
                 self.load_level(self.current_level + 1)
             else:
                 return "game_complete"
@@ -214,13 +236,15 @@ class GameManager:
         # Level info with level names
         level_names = [
             "The Gauntlet",
-            "Maze of Death", 
+            "Maze of Death",
             "Circle of Hell",
             "The Labyrinth",
-            "Final Nightmare"
+            "Final Nightmare",
         ]
-        
-        level_text = f"Level {self.current_level + 1}/5: {level_names[self.current_level]}"
+
+        level_text = (
+            f"Level {self.current_level + 1}/5: {level_names[self.current_level]}"
+        )
         level_surface = self.font.render(level_text, True, black)
         screen.blit(level_surface, (10, 10))
 
