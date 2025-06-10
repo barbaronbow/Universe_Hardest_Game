@@ -1,9 +1,12 @@
 
 
 # What is Universe's Hardest Game?
-The "Universe's Hardest Game" is inspired by another popular game following the same convention, ["World's Hardest Game"](https://www.coolmathgames.com/0-worlds-hardest-game) on [Cool Math Games](https://www.coolmathgames.com/). It follows the exact same play style and level design. You control a red square through either WASD or the arrow keys, where you are forced to navigate and beat levels. Each level requires you to collect every coin. There are green zones which represents checkpoints or a win condition to fulfill a level.
 
-Similarly, the game is extremely punishing. If you make a single mistake, such as you hitting an obstacle, your character is forced to respawn at the latest checkpoint, with the coins collected also being reset. Obstacles in this game, take the form of blue circles, they can move in a variety of patterns such as a circular motion, horizontally, and vertically.
+The "Universe's Hardest Game" is inspired by another popular game following the same convention, "World's Hardest Game" on Cool Math Games. It follows the exact 
+same play style and level design. You control a red square through either WASD or the arrow keys, where you are forced to navigate and beat levels. Each level requires you to collect every coin. There are green zones which represent checkpoints or a win condition to fulfill a level.
+
+Similarly, the game is extremely punishing. If you make a single mistake, such as hitting an obstacle, your character is forced to respawn at the latest checkpoint, with the coins collected also being reset. Obstacles in this game take the form of blue circles; they can move in various patterns, including circular motion, horizontal, and vertical motion.
+
 
 # How to access and play the game
 To run the game, you need to run `main.py`. To download the game on a UNIX based operating system, you can do the following:
